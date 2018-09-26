@@ -1,0 +1,25 @@
+---
+  name: "building_name_list"
+  runner_type: "python-script"
+  description: "Returns list of building names"
+  enabled: true
+  entry_point: "building_name_list.py"
+  parameters:
+    last_updated_lt:
+      type: "string"
+      description: "last updated less than date YYYY-MM-DD format"
+    last_updated_gt:
+      type: "string"
+      description: "last updated greater than date YYYY-MM-DD format"
+    first_added_lt:
+      type: "string"
+      description: "first added less than date YYYY-MM-DD format"
+    first_added_gt:
+      type: "string"
+      description: "first added greater date YYYY-MM-DD format"
+    custom_fields_and:
+      type: "string"
+      description: "filter by custom fields, and filter, format of key1:value1,key2:value2"
+    custom_fields_or:
+      type: "string"
+      description: "filter by custom fields, or filter, format of key1:value1,key2:value2"

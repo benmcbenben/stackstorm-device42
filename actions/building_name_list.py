@@ -1,7 +1,7 @@
 from lib.base_action import BaseAction
 
 
-class DeviceNameList(BaseAction):
+class BuildingNameList(BaseAction):
     def run(self, last_updated_lt=None,
             last_updated_gt=None, first_added_lt=None, first_added_gt=None,
             custom_fields_and=None, custom_fields_or=None
