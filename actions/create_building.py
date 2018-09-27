@@ -17,10 +17,9 @@ class CreateBuilding(BaseAction):
 
         print("payload: %s" % payload)
         d42_headers = {'Accept': 'application/json'}
-        response = self.post(
+        response = self.postAPI(
             endpoint="buildings/",
             payload=payload,
-            headers=d42_headers
         )
         # d42 api agent returns response.json(0) if response.ok...:
         if type(response) is dict:
