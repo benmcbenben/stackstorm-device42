@@ -1,0 +1,35 @@
+---
+name: create_building
+runner_type: run-python
+description: "Update a device on D42"
+enabled: true
+entry_point: 'create_building.py'
+parameters:
+  name:
+    type: 'string'
+    description: 'Name of the building to create.'
+    required: true
+  address:
+    type: 'string'
+    description: 'Address of the building.'
+    required: false
+  contact_name:
+    type: 'string'
+      description: 'Name of primary contact of building.'
+      required: false
+  contact_phone:
+    type: 'string'
+      description: 'Phone number of primary contact of building.'
+      required: false
+  tags:
+    type: 'string'
+      description: 'Comma separated list of tags.'
+      required: false
+#  custom_fields:
+#    type: 'object'
+#      description: 'Format of {fieldname: {Value: value, Notes: notes}'
+#      required: false
+#  rooms:
+#    type: 'string'
+#    description: 'Comma separted list of rooms to add at building creation.'
+#    required: false
