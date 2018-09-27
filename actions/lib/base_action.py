@@ -12,7 +12,7 @@ class BaseAction(Action):
         super(BaseAction, self).__init__(config)
 
         self.d42_server = self.config.get('d42_server', None)
-        # self.d42_server += self.config.get('d42_api_path', None)
+        self.d42_api_endpoint = self.d42_server + self.config.get('d42_api_path', '/')
 
         if not self.d42_server:
             raise ValueError('"d42_server" config value is required')
@@ -65,7 +65,7 @@ class BaseAction(Action):
 
     def postAPI(self, endpoint, params=None, payload=None):
         r = requests.post(
-            "%s%s" % (self.d42_server, endpoint),
+            "%s%s" % (self.d42_api_endpoint, endpoint),
             params=params,
             data=payload,
             auth=(self.d42_username, self.d42_password),
