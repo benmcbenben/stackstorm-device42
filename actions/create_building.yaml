@@ -17,7 +17,7 @@ parameters:
     type: 'string'
     description: 'Name of primary contact of building.'
     required: false
-  cobtact_phone:
+  contact_phone:
     type: 'string'
     description: 'Phone number of primary contact of building.'
     required: false
