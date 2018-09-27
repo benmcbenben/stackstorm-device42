@@ -15,16 +15,16 @@ parameters:
     required: false
   contact_name:
     type: 'string'
-      description: 'Name of primary contact of building.'
-      required: false
-  contact_phone:
+    description: 'Name of primary contact of building.'
+    required: false
+  cobtact_phone:
     type: 'string'
-      description: 'Phone number of primary contact of building.'
-      required: false
+    description: 'Phone number of primary contact of building.'
+    required: false
   tags:
     type: 'string'
-      description: 'Comma separated list of tags.'
-      required: false
+    description: 'Comma separated list of tags.'
+    required: false
 #  custom_fields:
 #    type: 'object'
 #      description: 'Format of {fieldname: {Value: value, Notes: notes}'
